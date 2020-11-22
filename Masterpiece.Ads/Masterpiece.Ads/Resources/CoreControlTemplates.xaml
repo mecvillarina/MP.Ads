@@ -13,21 +13,30 @@
     <ControlTemplate x:Key="MasterDetailMainPageControlTemplate">
         <Grid BackgroundColor="{StaticResource SecondaryBackgroundColor}"
               ColumnSpacing="0"
+              RowDefinitions="Auto,*"
               RowSpacing="0">
 
-            <ContentPresenter BackgroundColor="{StaticResource SecondaryBackgroundColor}"
-                              HorizontalOptions="FillAndExpand"
-                              VerticalOptions="FillAndExpand" />
-            <Grid BackgroundColor="Transparent"
+            <Grid BackgroundColor="{StaticResource SecondaryBackgroundColor}"
                   ColumnDefinitions="Auto,*"
                   Style="{StaticResource NavigationBarStyle}"
                   VerticalOptions="StartAndExpand">
+
+                <Label Grid.ColumnSpan="2"
+                       FontFamily="SourceSansProSemiBoldFontFamily"
+                       FontSize="{StaticResource LargeFontSize}"
+                       HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       Text="{TemplateBinding BindingContext.Title}"
+                       TextColor="{StaticResource BlackTextColor}"
+                       VerticalOptions="FillAndExpand"
+                       VerticalTextAlignment="Center" />
 
                 <Grid Padding="25,0">
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Command="{TemplateBinding BindingContext.TappedMenuCommand}"
                                               NumberOfTapsRequired="1" />
                     </Grid.GestureRecognizers>
+
                     <Label FontFamily="FontAwesomeSolid"
                            FontSize="{StaticResource LargeFontSize}"
                            Text="{StaticResource IconBar}"
@@ -35,41 +44,12 @@
                            VerticalOptions="FillAndExpand"
                            VerticalTextAlignment="Center" />
                 </Grid>
-
-                <StackLayout Grid.Column="1"
-                             Padding="0,0,15,0"
-                             HorizontalOptions="EndAndExpand"
-                             Orientation="Horizontal"
-                             Spacing="10">
-                    <Label FontFamily="SourceSansProSemiBoldFontFamily"
-                           FontSize="{StaticResource MediumFontSize}"
-                           Text="{TemplateBinding BindingContext.DisplayName}"
-                           TextColor="{StaticResource PrimaryColor1}"
-                           VerticalOptions="FillAndExpand"
-                           VerticalTextAlignment="Center" />
-
-                    <yummy:PancakeView Margin="0"
-                                       Padding="0"
-                                       BackgroundColor="{StaticResource PrimaryColor1}"
-                                       CornerRadius="20"
-                                       HeightRequest="40"
-                                       VerticalOptions="CenterAndExpand"
-                                       WidthRequest="40">
-                        <yummy:PancakeView.Border>
-                            <yummy:Border Thickness="0"
-                                          Color="White" />
-                        </yummy:PancakeView.Border>
-
-                        <Label FontSize="{StaticResource SmallFontSize}"
-                               HorizontalTextAlignment="Center"
-                               Text="{TemplateBinding BindingContext.DisplayNameInitial}"
-                               TextColor="White"
-                               TextTransform="Uppercase"
-                               VerticalTextAlignment="Center" />
-
-                    </yummy:PancakeView>
-                </StackLayout>
             </Grid>
+
+            <ContentPresenter Grid.Row="1"
+                              BackgroundColor="{StaticResource SecondaryBackgroundColor}"
+                              HorizontalOptions="FillAndExpand"
+                              VerticalOptions="FillAndExpand" />
         </Grid>
     </ControlTemplate>
 </ResourceDictionary>

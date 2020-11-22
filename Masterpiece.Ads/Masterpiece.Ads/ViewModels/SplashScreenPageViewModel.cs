@@ -1,4 +1,5 @@
-﻿using Prism.Navigation;
+﻿using Masterpiece.Ads.Core.Common.Constants;
+using Prism.Navigation;
 using System.Threading.Tasks;
 
 namespace Masterpiece.Ads.Core.ViewModels
@@ -14,7 +15,7 @@ namespace Masterpiece.Ads.Core.ViewModels
             base.OnNavigatedTo(parameters);
 
             await Task.Delay(10);
-            await NavigationService.NavigateAsync("../MainPage");
+            await NavigationService.NavigateAsync(ViewNames.GetMainMasterPage());
         }
     }
 }

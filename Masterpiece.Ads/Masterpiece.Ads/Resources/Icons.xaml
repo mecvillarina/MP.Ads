@@ -18,4 +18,5 @@
     <x:String x:Key="IconInfoCircle">&#xf05a;</x:String>
     <x:String x:Key="IconChevronUp">&#xf077;</x:String>
     <x:String x:Key="IconChevronDown">&#xf078;</x:String>
+    <x:String x:Key="IconAd">&#xf641;</x:String>
 </ResourceDictionary>

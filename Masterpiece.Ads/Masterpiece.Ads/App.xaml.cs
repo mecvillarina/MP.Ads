@@ -1,3 +1,4 @@
+using Masterpiece.Ads.Core.Common.Constants;
 using Masterpiece.Ads.Core.ViewModels;
 using Masterpiece.Ads.Core.Views;
 using Prism;
@@ -19,7 +20,7 @@ namespace Masterpiece.Ads.Core
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/SplashScreenPage");
+            await NavigationService.NavigateAsync($"{ViewNames.NavigationPage}/{ViewNames.SplashScreenPage}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -29,6 +30,11 @@ namespace Masterpiece.Ads.Core
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<SplashScreenPage, SplashScreenPageViewModel>();
+            containerRegistry.RegisterForNavigation<MainMasterDetailPage, MainMasterDetailPageViewModel>();
+            containerRegistry.RegisterForNavigation<BannerAdsPage, BannerAdsPageViewModel>();
+            containerRegistry.RegisterForNavigation<InterstitialAdsPage, InterstitialAdsPageViewModel>();
+            containerRegistry.RegisterForNavigation<RewardedAdsPage, RewardedAdsPageViewModel>();
+            containerRegistry.RegisterForNavigation<NativeAdsPage, NativeAdsPageViewModel>();
         }
     }
 }
