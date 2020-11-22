@@ -20,14 +20,27 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+  <key>CFBundleIconFiles</key>
+  <array>
+    <string>Icon-60@2x</string>
+    <string>Icon-60@3x</string>
+    <string>Icon-76</string>
+    <string>Icon-76@2x</string>
+    <string>Icon-Small-40</string>
+    <string>Icon-Small-40@2x</string>
+    <string>Icon-Small-40@3x</string>
+    <string>Icon-Small</string>
+    <string>Icon-Small@2x</string>
+    <string>Icon-Small@3x</string>
+  </array>
 	<key>MinimumOSVersion</key>
 	<string>12.0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<string>Resources/Assets.xcassets/AppIcon.appiconset</string>
 	<key>CFBundleDisplayName</key>
-	<string>Masterpiece.Ads</string>
+	<string>ERNI Ads</string>
 	<key>CFBundleName</key>
 	<string>Masterpiece.Ads</string>
 	<key>CFBundleIdentifier</key>
@@ -36,11 +49,9 @@
 	<string>1</string>
 	<key>CFBundleShortVersionString</key>
 	<string>0.0.1</string>
-  <key>XSAppIconAssets</key>
-  <string>Assets.xcassets/AppIcon.appiconset</string>
-  <key>GADApplicationIdentifier</key>
-  <string>ca-app-pub-6386166274895545~4786014552</string>
-  <key>GADIsAdManagerApp</key>
-  <true/>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-6386166274895545~4786014552</string>
+	<key>GADIsAdManagerApp</key>
+	<true/>
 </dict>
 </plist>
