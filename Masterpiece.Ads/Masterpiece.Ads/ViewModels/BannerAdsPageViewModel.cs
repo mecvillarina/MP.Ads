@@ -7,7 +7,7 @@ namespace Masterpiece.Ads.Core.ViewModels
 {
     public class BannerAdsPageViewModel : ViewModelBase
     {
-        public BannerAdsPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator) : base(navigationService, eventAggregator)
+        public BannerAdsPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator) : base(navigationService, null, eventAggregator)
         {
             Title = "Banner Ads";
             TappedMenuCommand = new DelegateCommand(() => EventAggregator.GetEvent<HamburgerTappedEvent>().Publish());

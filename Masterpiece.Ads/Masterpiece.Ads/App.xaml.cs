@@ -1,3 +1,5 @@
+using Acr.UserDialogs;
+using MarcTron.Plugin;
 using Masterpiece.Ads.Core.Common.Constants;
 using Masterpiece.Ads.Core.ViewModels;
 using Masterpiece.Ads.Core.Views;
@@ -19,7 +21,7 @@ namespace Masterpiece.Ads.Core
         protected override async void OnInitialized()
         {
             InitializeComponent();
-
+            CrossMTAdmob.Current.UserPersonalizedAds = true;
             await NavigationService.NavigateAsync($"{ViewNames.NavigationPage}/{ViewNames.SplashScreenPage}");
         }
 
@@ -35,6 +37,9 @@ namespace Masterpiece.Ads.Core
             containerRegistry.RegisterForNavigation<InterstitialAdsPage, InterstitialAdsPageViewModel>();
             containerRegistry.RegisterForNavigation<RewardedAdsPage, RewardedAdsPageViewModel>();
             containerRegistry.RegisterForNavigation<NativeAdsPage, NativeAdsPageViewModel>();
+
+            containerRegistry.RegisterInstance(CrossMTAdmob.Current);
+            containerRegistry.RegisterInstance(UserDialogs.Instance);
         }
     }
 }

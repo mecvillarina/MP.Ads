@@ -3,6 +3,7 @@
                     xmlns="http://xamarin.com/schemas/2014/forms"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     xmlns:aieffects="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+                    xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
                     xmlns:res="clr-namespace:Masterpiece.Ads.Core.Resources"
                     xmlns:xamios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
 
@@ -137,6 +138,16 @@
     <Style TargetType="CheckBox">
         <Setter Property="HeightRequest" Value="{StaticResource DefaultCheckBoxHeight}" />
         <Setter Property="Color" Value="{StaticResource AccentColor}" />
+    </Style>
+
+
+    <Style TargetType="controls:MTAdView">
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <x:OnIdiom Phone="50"
+                           Tablet="90" />
+            </Setter.Value>
+        </Setter>
     </Style>
 
 </ResourceDictionary>

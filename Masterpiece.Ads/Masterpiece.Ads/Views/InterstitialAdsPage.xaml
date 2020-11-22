@@ -6,4 +6,12 @@
                              xmlns:views="clr-namespace:Masterpiece.Ads.Core.Views"
                              prism:ViewModelLocator.AutowireViewModel="True"
                              BackgroundColor="{StaticResource SecondaryBackgroundColor}"
-                             ControlTemplate="{StaticResource MasterDetailMainPageControlTemplate}" />
+                             ControlTemplate="{StaticResource MasterDetailMainPageControlTemplate}">
+    <StackLayout Padding="25">
+        <Button Command="{Binding DisplayAdCommand}"
+                Text="Display Interstitial Ad" />
+
+        <Button Command="{Binding DisplayVideoAdCommand}"
+                Text="Display Interstitial Video Ad" />
+    </StackLayout>
+</views:MobileContentPageBase>

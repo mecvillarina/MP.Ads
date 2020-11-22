@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using Acr.UserDialogs;
+using Android.App;
 using Android.Content.PM;
 using Android.Gms.Ads;
 using Android.OS;
@@ -27,8 +28,9 @@ namespace Masterpiece.Ads.Droid
         {
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            MobileAds.Initialize(this);
+            MobileAds.Initialize(this, "ca-app-pub-6386166274895545~7619049695");
             AiForms.Effects.Droid.Effects.Init();
+            UserDialogs.Init(this);
         }
 
         protected override void OnResume()

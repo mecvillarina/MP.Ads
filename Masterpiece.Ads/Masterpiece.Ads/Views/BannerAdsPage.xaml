@@ -2,8 +2,23 @@
 <views:MobileContentPageBase x:Class="Masterpiece.Ads.Core.Views.BannerAdsPage"
                              xmlns="http://xamarin.com/schemas/2014/forms"
                              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
                              xmlns:prism="http://prismlibrary.com"
                              xmlns:views="clr-namespace:Masterpiece.Ads.Core.Views"
                              prism:ViewModelLocator.AutowireViewModel="True"
                              BackgroundColor="{StaticResource SecondaryBackgroundColor}"
-                             ControlTemplate="{StaticResource MasterDetailMainPageControlTemplate}" />
+                             ControlTemplate="{StaticResource MasterDetailMainPageControlTemplate}">
+    <Grid>
+        <StackLayout Spacing="10">
+            <controls:MTAdView AdsId="{OnPlatform Android='ca-app-pub-3940256099942544/6300978111',
+                                                  iOS='ca-app-pub-3940256099942544/2934735716'}"
+                               BackgroundColor="Red"
+                               HeightRequest="50" />
+
+            <controls:MTAdView AdsId="{OnPlatform Android='ca-app-pub-3940256099942544/6300978111',
+                                                  iOS='ca-app-pub-3940256099942544/2934735716'}"
+                               BackgroundColor="Red"
+                               HeightRequest="50" />
+        </StackLayout>
+    </Grid>
+</views:MobileContentPageBase>

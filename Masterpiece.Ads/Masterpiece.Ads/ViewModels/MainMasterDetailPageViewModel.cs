@@ -18,7 +18,7 @@ namespace Masterpiece.Ads.Core.ViewModels
         private readonly SubscriptionToken _hamburgerSetSwipeGestureEventSubscriptionToken;
 
         public MainMasterDetailPageViewModel(INavigationService navigationService,
-            IEventAggregator eventAggregator) : base(navigationService, eventAggregator)
+            IEventAggregator eventAggregator) : base(navigationService, null, eventAggregator)
         {
             _hamburgerTappedEventSubscriptionToken = EventAggregator.GetEvent<HamburgerTappedEvent>().Subscribe(() => OnPresentToggle(true), ThreadOption.UIThread);
             _hamburgerNavigateEventSubscriptionToken = EventAggregator.GetEvent<HamburgerNavigateEvent>().Subscribe(async (model) => await OnHamburgerNavigate(model), ThreadOption.UIThread);
