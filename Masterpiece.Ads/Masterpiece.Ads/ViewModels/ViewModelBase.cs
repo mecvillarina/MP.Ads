@@ -7,18 +7,18 @@ namespace Masterpiece.Ads.Core.ViewModels
     {
         protected INavigationService NavigationService { get; private set; }
 
+        public ViewModelBase(INavigationService navigationService)
+        {
+            NavigationService = navigationService;
+        }
+
+
         private string _title;
         public string Title
         {
             get { return _title; }
             set { SetProperty(ref _title, value); }
         }
-
-        public ViewModelBase(INavigationService navigationService)
-        {
-            NavigationService = navigationService;
-        }
-
         public virtual void Initialize(INavigationParameters parameters)
         {
 

@@ -28,6 +28,7 @@ namespace Masterpiece.Ads.Core
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<SplashScreenPage, SplashScreenPageViewModel>();
         }
     }
 }
