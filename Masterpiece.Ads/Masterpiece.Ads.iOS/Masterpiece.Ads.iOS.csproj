@@ -105,7 +105,9 @@
     <None Include="Info.plist" />
     <LinkDescription Include="LinkerSettings.xml" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -208,6 +210,7 @@
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
     <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.5.3.2" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.0.0.1909" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Masterpiece.Ads\Masterpiece.Ads.Core.csproj">
@@ -216,82 +219,143 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-20x20%401x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-20x20%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-20x20%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-20x20%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-20x20%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-20x20%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-29x29%401x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-29x29%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-29x29%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-29x29%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-29x29%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-29x29%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-40x40%401x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-40x40%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-40x40%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-40x40%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-40x40%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-40x40%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-60x60%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-60x60%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-60x60%403x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-60x60%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-76x76%401x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-76x76%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-76x76%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-76x76%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-83.5x83.5%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\Icon-App-83.5x83.5%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\ItunesArtwork%402x.jpg" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\ItunesArtwork%402x.jpg">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\ItunesArtwork%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcons.appiconset\ItunesArtwork%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Icon-Small-40%403x.png" />
+    <ImageAsset Include="Resources\Icon-Small-40%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\Icon-60%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Icon-60%403x.png" />
+    <ImageAsset Include="Resources\Icon-60%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Icon-76.png" />
+    <ImageAsset Include="Resources\Icon-76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Icon-76%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Icon-Small.png" />
+    <ImageAsset Include="Resources\Icon-Small.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Icon-Small%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Icon-Small%403x.png" />
+    <ImageAsset Include="Resources\Icon-Small%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Icon-Small-40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Icon-Small-40%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\app_splash_logo%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\app_splash_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\app_splash_logo%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -1,9 +1,5 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Prism.Navigation;
+using System.Threading.Tasks;
 
 namespace Masterpiece.Ads.Core.ViewModels
 {
@@ -11,6 +7,14 @@ namespace Masterpiece.Ads.Core.ViewModels
     {
         public SplashScreenPageViewModel(INavigationService navigationService) : base(navigationService)
         {
+        }
+
+        public async override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            base.OnNavigatedTo(parameters);
+
+            await Task.Delay(10);
+            await NavigationService.NavigateAsync("../MainPage");
         }
     }
 }

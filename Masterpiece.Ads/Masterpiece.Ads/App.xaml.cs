@@ -19,7 +19,7 @@ namespace Masterpiece.Ads.Core
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("NavigationPage/SplashScreenPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

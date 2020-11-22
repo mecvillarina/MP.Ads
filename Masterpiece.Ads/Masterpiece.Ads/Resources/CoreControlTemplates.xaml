@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary x:Class="Masterpiece.Ads.Core.Resources.CoreControlTemplates"
+                    xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:res="clr-namespace:Masterpiece.Ads.Core.Resources"
+                    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <ResourceDictionary.MergedDictionaries>
+        <res:Colors />
+        <res:Sizes />
+        <res:CoreStyles />
+    </ResourceDictionary.MergedDictionaries>
+
+    <ControlTemplate x:Key="MasterDetailMainPageControlTemplate">
+        <Grid BackgroundColor="{StaticResource SecondaryBackgroundColor}"
+              ColumnSpacing="0"
+              RowSpacing="0">
+
+            <ContentPresenter BackgroundColor="{StaticResource SecondaryBackgroundColor}"
+                              HorizontalOptions="FillAndExpand"
+                              VerticalOptions="FillAndExpand" />
+            <Grid BackgroundColor="Transparent"
+                  ColumnDefinitions="Auto,*"
+                  Style="{StaticResource NavigationBarStyle}"
+                  VerticalOptions="StartAndExpand">
+
+                <Grid Padding="25,0">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{TemplateBinding BindingContext.TappedMenuCommand}"
+                                              NumberOfTapsRequired="1" />
+                    </Grid.GestureRecognizers>
+                    <Label FontFamily="FontAwesomeSolid"
+                           FontSize="{StaticResource LargeFontSize}"
+                           Text="{StaticResource IconBar}"
+                           TextColor="{StaticResource PrimaryColor1}"
+                           VerticalOptions="FillAndExpand"
+                           VerticalTextAlignment="Center" />
+                </Grid>
+
+                <StackLayout Grid.Column="1"
+                             Padding="0,0,15,0"
+                             HorizontalOptions="EndAndExpand"
+                             Orientation="Horizontal"
+                             Spacing="10">
+                    <Label FontFamily="SourceSansProSemiBoldFontFamily"
+                           FontSize="{StaticResource MediumFontSize}"
+                           Text="{TemplateBinding BindingContext.DisplayName}"
+                           TextColor="{StaticResource PrimaryColor1}"
+                           VerticalOptions="FillAndExpand"
+                           VerticalTextAlignment="Center" />
+
+                    <yummy:PancakeView Margin="0"
+                                       Padding="0"
+                                       BackgroundColor="{StaticResource PrimaryColor1}"
+                                       CornerRadius="20"
+                                       HeightRequest="40"
+                                       VerticalOptions="CenterAndExpand"
+                                       WidthRequest="40">
+                        <yummy:PancakeView.Border>
+                            <yummy:Border Thickness="0"
+                                          Color="White" />
+                        </yummy:PancakeView.Border>
+
+                        <Label FontSize="{StaticResource SmallFontSize}"
+                               HorizontalTextAlignment="Center"
+                               Text="{TemplateBinding BindingContext.DisplayNameInitial}"
+                               TextColor="White"
+                               TextTransform="Uppercase"
+                               VerticalTextAlignment="Center" />
+
+                    </yummy:PancakeView>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

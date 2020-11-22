@@ -2,10 +2,17 @@
 <prism:PrismApplication x:Class="Masterpiece.Ads.Core.App"
                         xmlns="http://xamarin.com/schemas/2014/forms"
                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                        xmlns:prism="http://prismlibrary.com">
-    <Application.Resources>
-
-        <!--  Application resource dictionary  -->
-
-    </Application.Resources>
+                        xmlns:prism="http://prismlibrary.com"
+                        xmlns:res="clr-namespace:Masterpiece.Ads.Core.Resources">
+    <prism:PrismApplication.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <res:Colors />
+                <res:Icons />
+                <res:CoreStyles />
+                <res:Sizes />
+                <res:CoreControlTemplates />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </prism:PrismApplication.Resources>
 </prism:PrismApplication>
