@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Masterpiece.Ads.Core;
 using Prism;
 using Prism.Ioc;
 
@@ -17,8 +18,21 @@ namespace Masterpiece.Ads.Droid
 
             base.OnCreate(savedInstanceState);
 
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            InitLibraries(savedInstanceState);
             LoadApplication(new App(new AndroidInitializer()));
+        }
+
+        private void InitLibraries(Bundle savedInstanceState)
+        {
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            AiForms.Effects.Droid.Effects.Init();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            Xamarin.Essentials.Platform.OnResume();
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
@@ -33,7 +47,6 @@ namespace Masterpiece.Ads.Droid
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // Register any platform specific implementations
         }
     }
 }

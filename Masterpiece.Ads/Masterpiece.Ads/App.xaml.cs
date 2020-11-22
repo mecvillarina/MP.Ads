@@ -1,12 +1,12 @@
-using Masterpiece.Ads.ViewModels;
-using Masterpiece.Ads.Views;
+using Masterpiece.Ads.Core.ViewModels;
+using Masterpiece.Ads.Core.Views;
 using Prism;
 using Prism.Ioc;
 using Xamarin.Essentials.Implementation;
 using Xamarin.Essentials.Interfaces;
 using Xamarin.Forms;
 
-namespace Masterpiece.Ads
+namespace Masterpiece.Ads.Core
 {
     public partial class App
     {

@@ -1,12 +1,11 @@
 using System;
 using Android.App;
 using Android.Runtime;
+using Plugin.CurrentActivity;
 
 namespace Masterpiece.Ads.Droid
 {
-    [Application(
-        Theme = "@style/MainTheme"
-        )]
+    [Application(Theme = "@style/MainTheme")]
     public class MainApplication : Application
     {
         public MainApplication(IntPtr javaReference, JniHandleOwnership transfer)
@@ -18,6 +17,7 @@ namespace Masterpiece.Ads.Droid
         {
             base.OnCreate();
             Xamarin.Essentials.Platform.Init(this);
+            CrossCurrentActivity.Current.Init(this);
         }
     }
 }

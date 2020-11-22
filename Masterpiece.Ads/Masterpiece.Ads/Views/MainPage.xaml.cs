@@ -1,5 +1,5 @@
 ﻿
-namespace Masterpiece.Ads.Views
+namespace Masterpiece.Ads.Core.Views
 {
     public partial class MainPage
     {
