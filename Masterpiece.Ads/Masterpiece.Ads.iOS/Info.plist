@@ -36,5 +36,11 @@
 	<string>1</string>
 	<key>CFBundleShortVersionString</key>
 	<string>0.0.1</string>
+  <key>XSAppIconAssets</key>
+  <string>Assets.xcassets/AppIcon.appiconset</string>
+  <key>GADApplicationIdentifier</key>
+  <string>ca-app-pub-6386166274895545~4786014552</string>
+  <key>GADIsAdManagerApp</key>
+  <true/>
 </dict>
 </plist>

@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content.PM;
+using Android.Gms.Ads;
 using Android.OS;
 using Masterpiece.Ads.Core;
 using Prism;
@@ -26,6 +27,7 @@ namespace Masterpiece.Ads.Droid
         {
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            MobileAds.Initialize(this);
             AiForms.Effects.Droid.Effects.Init();
         }
 
