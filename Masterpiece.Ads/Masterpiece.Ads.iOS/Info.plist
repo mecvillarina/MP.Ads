@@ -44,7 +44,7 @@
 	<key>CFBundleName</key>
 	<string>Masterpiece.Ads</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.mecodes.alon.divepro.dev</string>
+	<string>ch.erni.masterpiece.ads</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>CFBundleShortVersionString</key>

@@ -16,8 +16,10 @@
             <Label FontSize="{StaticResource LargeFontSize}"
                    HorizontalTextAlignment="Center"
                    Text="Native Advanced Video Ads" />
+
             <rca:AdMobNativeView Grid.Row="1"
-                                 UnitId="ca-app-pub-3940256099942544/2521693316" />
+                                 UnitId="{OnPlatform Android='ca-app-pub-3940256099942544/1044960115',
+                                                     iOS='ca-app-pub-3940256099942544/2521693316'}" />
         </Grid>
 
     </Grid>
