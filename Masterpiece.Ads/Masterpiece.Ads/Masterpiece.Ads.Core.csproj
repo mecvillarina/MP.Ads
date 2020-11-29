@@ -30,6 +30,7 @@
     <PackageReference Include="Acr.UserDialogs" Version="7.1.0.466" />
     <PackageReference Include="AiForms.Effects" Version="1.6.10" />
     <PackageReference Include="MarcTron.Admob" Version="1.6.0" />
+    <PackageReference Include="RedCorners.Forms.Ad" Version="8.56.3-beta" />
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
     <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.5.3.2" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.0.0.1909" />
@@ -40,8 +41,8 @@
     <Compile Update="Views\BannerAdsPage.xaml.cs">
       <DependentUpon>BannerAdsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\InterstitialAdsPage.xaml.cs">
-      <DependentUpon>InterstitialAdsPage.xaml</DependentUpon>
+    <Compile Update="Views\PopupAdsPage.xaml.cs">
+      <DependentUpon>PopupAdsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -64,16 +65,13 @@
     <EmbeddedResource Update="Views\BannerAdsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\InterstitialAdsPage.xaml">
+    <EmbeddedResource Update="Views\PopupAdsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MainMasterDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\NativeAdsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\RewardedAdsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SplashScreenPage.xaml">

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masterpiece.Ads.Core", "Masterpiece.Ads\Masterpiece.Ads\Masterpiece.Ads.Core.csproj", "{A78B3FDC-41AD-409D-9AE8-00A4F30B9CCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Masterpiece.Ads.Core", "Masterpiece.Ads\Masterpiece.Ads\Masterpiece.Ads.Core.csproj", "{A78B3FDC-41AD-409D-9AE8-00A4F30B9CCA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masterpiece.Ads.Android", "Masterpiece.Ads\Masterpiece.Ads.Android\Masterpiece.Ads.Android.csproj", "{293028A2-6072-4616-B232-297247B1B3CB}"
 EndProject
@@ -94,6 +94,7 @@ Global
 		{DE000385-A778-4A46-A625-DE9963963D38}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{DE000385-A778-4A46-A625-DE9963963D38}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{DE000385-A778-4A46-A625-DE9963963D38}.Debug|iPhone.Build.0 = Debug|iPhone
+		{DE000385-A778-4A46-A625-DE9963963D38}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{DE000385-A778-4A46-A625-DE9963963D38}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{DE000385-A778-4A46-A625-DE9963963D38}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{DE000385-A778-4A46-A625-DE9963963D38}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator

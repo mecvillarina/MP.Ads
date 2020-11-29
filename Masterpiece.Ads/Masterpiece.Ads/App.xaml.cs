@@ -34,8 +34,7 @@ namespace Masterpiece.Ads.Core
             containerRegistry.RegisterForNavigation<SplashScreenPage, SplashScreenPageViewModel>();
             containerRegistry.RegisterForNavigation<MainMasterDetailPage, MainMasterDetailPageViewModel>();
             containerRegistry.RegisterForNavigation<BannerAdsPage, BannerAdsPageViewModel>();
-            containerRegistry.RegisterForNavigation<InterstitialAdsPage, InterstitialAdsPageViewModel>();
-            containerRegistry.RegisterForNavigation<RewardedAdsPage, RewardedAdsPageViewModel>();
+            containerRegistry.RegisterForNavigation<PopupAdsPage, PopupAdsPageViewModel>();
             containerRegistry.RegisterForNavigation<NativeAdsPage, NativeAdsPageViewModel>();
 
             containerRegistry.RegisterInstance(CrossMTAdmob.Current);

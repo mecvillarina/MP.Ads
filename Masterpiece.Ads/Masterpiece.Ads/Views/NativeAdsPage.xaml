@@ -3,7 +3,22 @@
                              xmlns="http://xamarin.com/schemas/2014/forms"
                              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                              xmlns:prism="http://prismlibrary.com"
+                             xmlns:rca="clr-namespace:RedCorners.Forms.Ad;assembly=RedCorners.Forms.Ad"
                              xmlns:views="clr-namespace:Masterpiece.Ads.Core.Views"
                              prism:ViewModelLocator.AutowireViewModel="True"
                              BackgroundColor="{StaticResource SecondaryBackgroundColor}"
-                             ControlTemplate="{StaticResource MasterDetailMainPageControlTemplate}" />
+                             ControlTemplate="{StaticResource MasterDetailMainPageControlTemplate}">
+    <Grid>
+        <Grid Margin="0,20"
+              RowDefinitions="Auto, *"
+              RowSpacing="15">
+
+            <Label FontSize="{StaticResource LargeFontSize}"
+                   HorizontalTextAlignment="Center"
+                   Text="Native Advanced Video Ads" />
+            <rca:AdMobNativeView Grid.Row="1"
+                                 UnitId="ca-app-pub-3940256099942544/2521693316" />
+        </Grid>
+
+    </Grid>
+</views:MobileContentPageBase>

@@ -62,7 +62,7 @@
                                  Orientation="Horizontal"
                                  Spacing="15">
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding TapInterstitialAdsCommand}" />
+                            <TapGestureRecognizer Command="{Binding TapInterstitialAndRewardedAdsCommand}" />
                         </StackLayout.GestureRecognizers>
 
                         <Label FontFamily="FontAwesomeSolid"
@@ -73,7 +73,8 @@
                                VerticalTextAlignment="Center" />
 
                         <Label FontSize="{StaticResource MediumFontSize}"
-                               Text="Interstitial Ads"
+                               LineBreakMode="WordWrap"
+                               Text="Interstitial and Rewarded Ads"
                                TextColor="{StaticResource LightGrayTextColor}"
                                TextTransform="Uppercase"
                                VerticalOptions="FillAndExpand"
@@ -81,28 +82,6 @@
                     </StackLayout>
 
                     <StackLayout Grid.Row="2"
-                                 Orientation="Horizontal"
-                                 Spacing="15">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding TapRewardedAdsCommand}" />
-                        </StackLayout.GestureRecognizers>
-
-                        <Label FontFamily="FontAwesomeSolid"
-                               FontSize="{StaticResource LargeFontSize}"
-                               Text="{StaticResource IconAd}"
-                               TextColor="{StaticResource LightGrayColor}"
-                               VerticalOptions="FillAndExpand"
-                               VerticalTextAlignment="Center" />
-
-                        <Label FontSize="{StaticResource MediumFontSize}"
-                               Text="Rewarded Ads"
-                               TextColor="{StaticResource LightGrayTextColor}"
-                               TextTransform="Uppercase"
-                               VerticalOptions="FillAndExpand"
-                               VerticalTextAlignment="Center" />
-                    </StackLayout>
-
-                    <StackLayout Grid.Row="3"
                                  Orientation="Horizontal"
                                  Spacing="15">
                         <StackLayout.GestureRecognizers>

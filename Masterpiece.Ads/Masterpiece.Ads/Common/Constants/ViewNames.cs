@@ -11,8 +11,7 @@ namespace Masterpiece.Ads.Core.Common.Constants
         public const string MainMasterDetailPage = nameof(MainMasterDetailPage);
         public const string MainPage = nameof(MainPage);
         public const string BannerAdsPage = nameof(BannerAdsPage);
-        public const string InterstitialAdsPage = nameof(InterstitialAdsPage);
-        public const string RewardedAdsPage = nameof(RewardedAdsPage);
+        public const string PopupAdsPage = nameof(PopupAdsPage);
         public const string NativeAdsPage = nameof(NativeAdsPage);
 
         public static string GetMainMasterPage()

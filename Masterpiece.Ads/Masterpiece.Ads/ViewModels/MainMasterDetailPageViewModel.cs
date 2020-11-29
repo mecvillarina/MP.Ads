@@ -27,16 +27,13 @@ namespace Masterpiece.Ads.Core.ViewModels
             _hamburgerSetSwipeGestureEventSubscriptionToken = EventAggregator.GetEvent<HamburgerSetSwipeGestureEvent>().Subscribe((val) => IsGestureEnabled = val, ThreadOption.UIThread);
 
             TapBannerAdsCommand = new DelegateCommand(async () => await OnTapBannerAds());
-            TapInterstitialAdsCommand = new DelegateCommand(async () => await OnTapInterstitialAds());
-            TapRewardedAdsCommand = new DelegateCommand(async () => await OnTapRewardedAds());
+            TapInterstitialAndRewardedAdsCommand = new DelegateCommand(async () => await OnTapInterstitialAndRewardedAds());
             TapNativeAdsCommand = new DelegateCommand(async () => await OnTapNativeAds());
         }
 
         private async Task OnTapBannerAds() => await OnHamburgerNavigate(new HamburgerNavigateModel() { Path = ViewNames.BannerAdsPage });
-        private async Task OnTapInterstitialAds() => await OnHamburgerNavigate(new HamburgerNavigateModel() { Path = ViewNames.InterstitialAdsPage });
-        private async Task OnTapRewardedAds() => await OnHamburgerNavigate(new HamburgerNavigateModel() { Path = ViewNames.RewardedAdsPage });
+        private async Task OnTapInterstitialAndRewardedAds() => await OnHamburgerNavigate(new HamburgerNavigateModel() { Path = ViewNames.PopupAdsPage });
         private async Task OnTapNativeAds() => await OnHamburgerNavigate(new HamburgerNavigateModel() { Path = ViewNames.NativeAdsPage });
-
 
         private bool _isPresented;
         public bool IsPresented
@@ -76,8 +73,7 @@ namespace Masterpiece.Ads.Core.ViewModels
         }
 
         public DelegateCommand TapBannerAdsCommand { get; private set; }
-        public DelegateCommand TapInterstitialAdsCommand { get; private set; }
-        public DelegateCommand TapRewardedAdsCommand { get; private set; }
+        public DelegateCommand TapInterstitialAndRewardedAdsCommand { get; private set; }
         public DelegateCommand TapNativeAdsCommand { get; private set; }
 
         public override void Initialize(INavigationParameters parameters)

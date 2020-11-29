@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<views:MobileContentPageBase x:Class="Masterpiece.Ads.Core.Views.InterstitialAdsPage"
+<views:MobileContentPageBase x:Class="Masterpiece.Ads.Core.Views.PopupAdsPage"
                              xmlns="http://xamarin.com/schemas/2014/forms"
                              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                              xmlns:prism="http://prismlibrary.com"
@@ -8,10 +8,13 @@
                              BackgroundColor="{StaticResource SecondaryBackgroundColor}"
                              ControlTemplate="{StaticResource MasterDetailMainPageControlTemplate}">
     <StackLayout Padding="25">
-        <Button Command="{Binding DisplayAdCommand}"
+        <Button Command="{Binding DisplayInterstitialAdCommand}"
                 Text="Display Interstitial Ad" />
 
-        <Button Command="{Binding DisplayVideoAdCommand}"
+        <Button Command="{Binding DisplayInterstitialVideoAdCommand}"
                 Text="Display Interstitial Video Ad" />
+
+        <Button Command="{Binding DisplayRewardedVideoAdCommand}"
+                Text="Display Rewarded Video Ad" />
     </StackLayout>
 </views:MobileContentPageBase>

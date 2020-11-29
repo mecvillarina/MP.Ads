@@ -10,25 +10,27 @@ using Xamarin.Forms;
 
 namespace Masterpiece.Ads.Core.ViewModels
 {
-    public class InterstitialAdsPageViewModel : ViewModelBase
+    public class PopupAdsPageViewModel : ViewModelBase
     {
         private readonly IMTAdmob _admobPlugin;
 
-        public InterstitialAdsPageViewModel(INavigationService navigationService, IUserDialogs userDialogs, IEventAggregator eventAggregator, IMTAdmob admobPlugin) : base(navigationService, userDialogs, eventAggregator)
+        public PopupAdsPageViewModel(INavigationService navigationService, IUserDialogs userDialogs, IEventAggregator eventAggregator, IMTAdmob admobPlugin) : base(navigationService, userDialogs, eventAggregator)
         {
             _admobPlugin = admobPlugin;
 
             Title = "Interstitial Ads";
             TappedMenuCommand = new DelegateCommand(() => EventAggregator.GetEvent<HamburgerTappedEvent>().Publish());
-            DisplayAdCommand = new DelegateCommand(async () => await OnDisplayAd());
-            DisplayVideoAdCommand = new DelegateCommand(async () => await OnDisplayVideoAd());
+            DisplayInterstitialAdCommand = new DelegateCommand(async () => await OnDisplayInterstitialAd());
+            DisplayInterstitialVideoAdCommand = new DelegateCommand(async () => await OnDisplayInsterstitialVideoAd());
+            DisplayRewardedVideoAdCommand = new DelegateCommand(async () => await OnDisplayRewardedVideoAd());
         }
 
         public DelegateCommand TappedMenuCommand { get; private set; }
-        public DelegateCommand DisplayAdCommand { get; private set; }
-        public DelegateCommand DisplayVideoAdCommand { get; private set; }
+        public DelegateCommand DisplayInterstitialAdCommand { get; private set; }
+        public DelegateCommand DisplayInterstitialVideoAdCommand { get; private set; }
+        public DelegateCommand DisplayRewardedVideoAdCommand { get; private set; }
 
-        private async Task OnDisplayAd()
+        private async Task OnDisplayInterstitialAd()
         {
             string adsId = string.Empty;
 
@@ -45,7 +47,7 @@ namespace Masterpiece.Ads.Core.ViewModels
             _admobPlugin.ShowInterstitial();
         }
 
-        private async Task OnDisplayVideoAd()
+        private async Task OnDisplayInsterstitialVideoAd()
         {
             string adsId = string.Empty;
 
@@ -61,5 +63,23 @@ namespace Masterpiece.Ads.Core.ViewModels
             UserDialogs.HideLoading();
             _admobPlugin.ShowInterstitial();
         }
+
+        private async Task OnDisplayRewardedVideoAd()
+        {
+            string adsId = string.Empty;
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.Android: adsId = "ca-app-pub-3940256099942544/5224354917"; break;
+                case Device.iOS: adsId = "ca-app-pub-3940256099942544/1712485313"; break;
+            }
+
+            UserDialogs.ShowLoading();
+            _admobPlugin.LoadRewardedVideo(adsId);
+            await Task.Delay(2000);
+            UserDialogs.HideLoading();
+            _admobPlugin.ShowRewardedVideo();
+        }
+
     }
 }
